@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	char alpha[26] = "abcdefghijklmnopqrstuvwxyz";
+	char alpha[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int x;
 
-	for (x = 0; x <= 26; x++)
+	for (x = 0; x <= 52; x++)
 	{
 		putchar(alpha[x]);
 	}
