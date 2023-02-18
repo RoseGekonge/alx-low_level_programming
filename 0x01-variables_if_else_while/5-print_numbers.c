@@ -1,4 +1,4 @@
-##include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Prints the numbers from 1 to 10
@@ -9,10 +9,10 @@ int main(void)
 {
 	int x;
 
-        for (x = 0; x <= 9; x++)
+	for (x = 0; x <= 9; x++)
 	{
-		putchar(x);
+		printf("%d", x);
 	}
-	putchar('\n');
+	printf('\n');
 	return (0);
 }
