@@ -2,12 +2,18 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - prints all alphabets
  *
  * Return: Always 0.
  */
-int main(void)
+
+void print_alphabet(void)
 {
-	void print_alphabet(void);
-	return (0);
+	char num = 'a';
+
+	for (num = 'a' ; num <= 'z'; num++)
+	{
+		_putchar(num);
+	}
+	_putchar('\n');
 }
