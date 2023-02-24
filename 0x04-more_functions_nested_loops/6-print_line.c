@@ -7,9 +7,9 @@
  *
  * @n: parameter for letter
  *
- * Return: 1 if lowercase, 0 if not
+ * Return: nothing
  */
-
+:
 void print_line(int n)
 {
 	int k;
