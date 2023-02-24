@@ -1,15 +1,9 @@
-#include <stdio.h>
-#include  <unistd.h>
 #include "main.h"
 
 /**
- * print_line - prints _x n
- *
- * @n: parameter for letter
- *
- * Return: nothing
+ * print_line - draws a straight line in the terminal
+ * @n: Number to be computed
  */
-
 void print_line(int n)
 {
 	if (n <= 0)
@@ -18,13 +12,12 @@ void print_line(int n)
 	}
 	else
 	{
-		int k;
+		int i;
 
-		for (k = 0 ; k <= n ; k++)
-		{
-			_putchar('_');
-		}
+		for (i = 1; i <= n; i++)
+	{
+		_putchar('_');
+	}
 		_putchar('\n');
 	}
 }
-
