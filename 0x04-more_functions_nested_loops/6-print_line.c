@@ -9,7 +9,7 @@
  *
  * Return: nothing
  */
-:
+
 void print_line(int n)
 {
 	int k;
