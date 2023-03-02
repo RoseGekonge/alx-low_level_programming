@@ -4,16 +4,21 @@
 #include "main.h"
 
 /**
- * _strcat - appending src to dest
- * @str: parameter of interest
- * Return: 0
+ * string_toupper - appending r to upper case
+ * @r: parameter of interest
+ * Return: r
  */
 
-char *string_toupper(char *)
+char *string_toupper(char *r)
 {
-	char str;
+	int k;
 
-	printf("%s", toupper(str));
-
-	return (0);
+	k = 0;
+	while (r[k] != '\0')
+	{
+		if (r[k] >= 'a' && r[k] <= 'z')
+			r[k] = r[k] - 32;
+		k++;
+	}
+	return (r);
 }
