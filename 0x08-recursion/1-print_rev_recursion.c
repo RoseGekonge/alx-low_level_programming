@@ -13,8 +13,9 @@ void _print_rev_recursion(char *s)
 	int k;
 	int r = strlen(s);
 
-	for (k = r - 1 ; k >= 0; k--)
+	if (*s)
 	{
-		printf("%c", s[k]);
+		_print_rev_recursion(s+1);
+		_putchar(*s);
 	}
 }
