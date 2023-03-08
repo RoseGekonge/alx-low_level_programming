@@ -1,8 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <math.h>
-#include <string.h>
-#include "main.h"
 
 /**
  * _pow_recursion - prints x to the power of y
