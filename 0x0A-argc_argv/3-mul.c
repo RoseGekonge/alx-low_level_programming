@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 	int r = atoi(argv[argc - 1]);
 	int k = atoi(argv[argc - 2]);
 
-	if (argc != 2)
+	if (argc != 3)
 	{
 		printf("Error");
+		printf("\n");
 		return (-1);
 	}
 	else
