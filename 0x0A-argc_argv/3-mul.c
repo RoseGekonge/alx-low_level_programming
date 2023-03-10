@@ -13,7 +13,14 @@ int main(int argc, char *argv[])
 	int r = atoi(argv[argc - 1]);
 	int k = atoi(argv[argc - 2]);
 
-	printf("%d\n", r * k);
-
-	return (0);
+	if (argc != 2)
+	{
+		printf("Error");
+		return (-1);
+	}
+	else
+	{
+		printf("%d\n", r * k);
+		return (0);
+	}
 }
