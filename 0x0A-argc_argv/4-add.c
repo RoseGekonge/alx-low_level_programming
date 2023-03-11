@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		for (k = 1 ; k < argc ; k++)
 		{
 			d = atoi(argv[k]);
-			if (d == 0)
+			if (d == 0 || d < 0)
 			{
 				printf("Error");
 				printf("\n");
