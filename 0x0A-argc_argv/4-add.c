@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int r = 0;
 	int k, g;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 		printf("%d", r);
 		printf("\n");
@@ -24,18 +24,16 @@ int main(int argc, char *argv[])
 	{
 		for (k = 0 ; k < argc ; k++)
 		{
-			if (isdigit(argv[k]) == 0)
+			if (!isdigit(argv[k]))
 			{
 				printf("Error");
 				printf("\n");
 				return (1);
 			}
-			else
-			{
-				g = g + atoi(argv[k]);
-			}
+			g = g + atoi(argv[k]);
 		}
 		printf("%d", g);
+		printf("\n");
 	}
 	return (0);
 }
