@@ -12,14 +12,13 @@
 
 int main(int argc, char *argv[])
 {
-	int r = 0;
 	int k, g, d;
 
 	g = 0;
 
 	if (argc < 2)
 	{
-		printf("%d", r);
+		printf("%d", 0);
 		printf("\n");
 	}
 	else
