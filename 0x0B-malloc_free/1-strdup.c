@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - duplicates the string
@@ -10,14 +11,15 @@
 
 char *_strdup(char *str)
 {
+	int r;
 	char *ptr = malloc(sizeof(char));
 	int len = strlen(str);
 
 	if (str == NULL)
 	{
-		return (NUL);
+		return (NULL);
 	}
-	for (int r = 0; r < len; r++)
+	for (r = 0; r < len; r++)
 	{
 		ptr[r] = *str;
 	}
