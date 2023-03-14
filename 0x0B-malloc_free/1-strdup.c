@@ -19,9 +19,9 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	while (str[r] != '\0')
+	for (; r < len; r++)
 	{
-		for (; r < len; r++)
+		while (str[r] != '\0')
 		{
 			ptr[r] = str[r];
 		}
