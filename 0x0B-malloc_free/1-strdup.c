@@ -21,10 +21,11 @@ char *_strdup(char *str)
 	}
 	for (; r < len; r++)
 	{
-		while (str[r] != '\0')
+		if (str[r] == '\0')
 		{
-			ptr[r] = str[r];
+			return (NULL);
 		}
+		ptr[r] = str[r];
 	}
 	return (ptr);
 }
