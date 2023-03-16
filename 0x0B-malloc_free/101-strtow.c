@@ -16,7 +16,7 @@ char count(char *s)
 
 	for (g = 0; s[g] != '\0'; g++)
 	{
-		if (c[g] == ' ')
+		if (s[g] == ' ')
 		{
 			r = 0;
 		}
