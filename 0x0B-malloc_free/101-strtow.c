@@ -14,9 +14,9 @@ char count(char *s)
 	r = 0;
 	k = 0;
 
-	for (g = 0; c[g] != '\0'; g++)
+	for (g = 0; s[g] != '\0'; g++)
 	{
-		if (c[g] == '')
+		if (c[g] == ' ')
 		{
 			r = 0;
 		}
@@ -64,7 +64,7 @@ char **strtow(char *str)
 
 	for (r = 0; r <= len ; r++)
 	{
-		if (str[r] == '' || str[r] == '\0')
+		if (str[r] == ' ' || str[r] == '\0')
 		{
 			if (g)
 			{
