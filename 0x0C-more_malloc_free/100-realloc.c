@@ -19,16 +19,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size == old_size)
 	{
-		return (ptr);
+		printf("%p", ptr);
 	}
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
-		return (NULL);
+		puts(NULL);
 	}
 	if (ptr == NULL)
 	{
-		return (val);
+		puts(val);
 	}
 	else
 	{
@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		for (i = 1; i < r + 1; i++)
 		{
 			alloc[i] = val[i];
-			return (alloc);
+			printf("%s", alloc);
 		}
 	}
 }
