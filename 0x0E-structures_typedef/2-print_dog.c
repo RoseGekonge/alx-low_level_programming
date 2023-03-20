@@ -16,7 +16,7 @@ void print_dog(struct dog *d)
 		}
 		else if ((*d).name == NULL)
 		{
-			(*d).name = nill;
+			(*d).name = "(nill)";
 		}
 		else if ((*d).age == NULL)
 		{
