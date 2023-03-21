@@ -12,7 +12,7 @@ int length(char *r)
 {
 	int k;
 
-	for (k = 0; r[k] != '\0')
+	for (k = 0; r[k] != '\0'; k++)
 	{
 
 	}
@@ -63,21 +63,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	dog.name = malloc(sizeof(char) * (size1 + 1));
-	if (dog.owner == NULL)
+	dog->name = malloc(sizeof(char) * (size1 + 1));
+	if (dog->owner == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-	dog.owner = malloc(sizeof(char) * (size2 + 1));
-	if (dog.owner == NULL)
+	dog->owner = malloc(sizeof(char) * (size2 + 1));
+	if (dog->owner == NULL)
 	{
 		free(dog);
-		free(dog.name);
+		free(dog->name);
 		return (NULL);
 	}
-	copy(dog.name, name);
-	copy(dog.owner, owner);
-	dog.age = age;
+	copy(dog->name, name);
+	copy(dog->owner, owner);
+	dog->age = age;
 	return (dog);
 }
