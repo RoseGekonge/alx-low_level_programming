@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	len = atoi(argv[1]);
 	if (len < 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(2);
 	}
 	array = (char *)main;
