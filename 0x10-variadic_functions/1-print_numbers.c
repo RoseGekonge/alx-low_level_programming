@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - returns calculation results
+ * print_numbers - returns numbers separated by separator
  * @separator: string to be printed
  * @n: length og arguments
  */
