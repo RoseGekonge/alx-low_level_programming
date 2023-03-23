@@ -12,31 +12,19 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int a;
-	int b;
-	char input;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i;
 
-	input = &s;
-
-	switch (input)
+	while (ops[i].op != NULL && *(ops[i].op) != *s)
 	{
-		case '+':
-			op_add(a, b);
-			break;
-		case '-':
-			op_sub(a, b);
-			break;
-		case '*':
-			op_mul(a, b);
-			break;
-		case '/':
-			op_div(a, b);
-			break;
-		case '%':
-			op_mod(a, b);
-			break;
-		default:
-			return (NULL);
+		i++;
 	}
-	return (0);
+	return (ops[i].f);
 }
