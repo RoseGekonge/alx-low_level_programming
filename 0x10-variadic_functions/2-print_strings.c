@@ -16,10 +16,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	if (separator != NULL && len != 0)
 	{
 		va_start(ap, n);
-		if (va_arg(ap, char *) == NULL)
-		{
-			printf("%s", "(nil)");
-		}
 		if (len == 1)
 		{
 			printf("%s", va_arg(ap, char *));
