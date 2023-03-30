@@ -11,11 +11,11 @@ size_t print_list(const list_t *h)
 {
 	int count = 0;
 
-	struct list_t = h;
+	const list_t *node = h;
 
 	while (node != NULL)
 	{
-		printf("[%d] %s", h->len, h->str);
+		printf("[%d] %s\n", node->len, node->str);
 		count++;
 		node = node->next;
 	}

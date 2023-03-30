@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <string.h>
-#include <uinistd.h>
+#include <unistd.h>
 #include <ctype.h>
 #include <stddef.h>
 
