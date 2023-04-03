@@ -7,7 +7,7 @@
  * Return: nothing
  */
 
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
 	listint_t *node;
 
@@ -15,7 +15,6 @@ void free_list(list_t *head)
 	{
 		node = head;
 		head = head->next;
-		free(node->str);
 		free(node);
 	}
 }
