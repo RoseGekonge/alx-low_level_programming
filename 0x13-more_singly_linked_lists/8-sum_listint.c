@@ -8,7 +8,7 @@
 
 int sum_listint(listint_t *head)
 {
-	int r, count = 0, g = 0;
+	int count = 0, g = 0;
 	listint_t *node = head;
 
 	if (head == NULL)
