@@ -2,7 +2,7 @@
 
 /**
  * free_listint_safe - frees listint_t list
- * @h; pointer
+ * @h: pointer
  * Return: size of list
  */
 

@@ -12,12 +12,12 @@ const listint_t **a(const listint_t **arr, const listint_t *list, size_t num)
 {
 	size_t r = 0;
 	const listint_t **temp;
-	
+
 	temp = malloc(num * sizeof(listint_t *));
 	if (temp == NULL)
 	{
 		free(arr);
-		exit (98);
+		exit(98);
 	}
 	while (r < num)
 	{
@@ -25,7 +25,7 @@ const listint_t **a(const listint_t **arr, const listint_t *list, size_t num)
 		r++;
 	}
 	temp[r] = list;
-	free (arr);
+	free(arr);
 	return (temp);
 }
 

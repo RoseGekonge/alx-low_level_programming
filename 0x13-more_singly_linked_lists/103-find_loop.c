@@ -1,6 +1,9 @@
 #include "lists.h"
 
 /**
+ * find_listint_loop - finding loop
+ * @head: argument
+ * Return: temp
  */
 
 listint_t *find_listint_loop(listint_t *head)
