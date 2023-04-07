@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unint - converts binary to decimal
+ * binary_to_uint - converts binary to decimal
  * @b: binary number
  * Return: m
  */
