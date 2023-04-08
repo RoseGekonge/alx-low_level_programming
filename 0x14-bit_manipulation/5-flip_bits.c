@@ -27,7 +27,7 @@ int isEven(int num)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int r = n ^m;
+	unsigned long int r = n ^ m;
 	unsigned int c, count = 0, g = 0;
 
 	while (r > 0)
