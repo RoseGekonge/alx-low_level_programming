@@ -4,6 +4,7 @@
  * clear_bit - replaces 1 with 0
  * @n: decimal of interest
  * @index: position to edit
+ * Return: 0 or -1
  */
 
 int clear_bit(unsigned long int *n, unsigned int index)
@@ -18,15 +19,12 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	if (index >= k)
 		return (-1);
+	r = 1 << index;
+	g = num >> f;
+	if ((g % 2) == 0 && *n != 0)
+		*n = *n ^ r;
 	else
-	{
-		r = 1 << index;
-		g = num >> f;
-		if ((g % 2) == 0 && *n != 0)
-			*n = *n ^ r;
-		else
-			*n = *n;
+		*n = *n;
 
-	}
 	return (1);
 }
