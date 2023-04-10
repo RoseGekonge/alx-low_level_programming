@@ -1,18 +1,6 @@
 #include "main.h"
 
 /**
- * print_num - prints numbers
- * @g: number to print
- * Return: 0
- */
-
-int print_num(long int g)
-{
-	fprintf(stdout, "%ld", g);
-	return (0);
-}
-
-/**
  * isEven - checks if od or even
  * @num: number to check
  * Return: 0 or 1
@@ -39,7 +27,7 @@ int isEven(int num)
 int for_print_binary(unsigned long int n)
 {
 	long int num = 0, f, s, b;
-	long int m = 0, x = 10, i = 1;
+	long int m = 0, x = 10, g, i = 1;
 
 	s = isEven(n);
 	while (n > 1)
@@ -55,8 +43,8 @@ int for_print_binary(unsigned long int n)
 		m += f;
 		i++;
 	}
-	print_num((m + s));
-	return (m + s);
+	g = m + s;
+	return (g);
 }
 
 /**
