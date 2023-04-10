@@ -8,10 +8,7 @@
 
 int print_num(long int g)
 {
-	char buff[20];
-	int len = snprintf(buff, 20, "%ld", g);
-
-	write(1, buff, len);
+	fprintf(1, "%ld", d);
 	return (0);
 }
 
