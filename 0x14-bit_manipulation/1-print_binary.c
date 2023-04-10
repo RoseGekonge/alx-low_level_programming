@@ -8,7 +8,7 @@
 
 int print_num(long int g)
 {
-	fprintf(1, "%ld", d);
+	fprintf(stdout, "%ld", g);
 	return (0);
 }
 
