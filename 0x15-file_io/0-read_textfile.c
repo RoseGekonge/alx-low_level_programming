@@ -1,27 +1,25 @@
 #include "main.h"
 
+/**
+ * read_textfile - reads and writes from a file
+ * @filename: file to be read
+ * @letters: byte limit to be read
+ * Return: number of bytes written
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	    FILE *r = fopen(filename, "r");
-	    int d = (int) letters;
-	        int k = (int)letters;
-		    char g[1000];
-		        int count = 0, f = 0;
+	char *buf;
+	ssize_t bytes_read, bytes_written;
+	int fd = open(filename, O_RDONLY);
 
-			    if (r == NULL) {
-				            return 0;
-					        } else {
-							        while (fgets(g, letters, r) != NULL && f < k) {
-									            int len = strlen(g);
-										                if (len > d - 1) {
-													                len = letters - 1;
-															            }
-												            fwrite(g, sizeof(char), len, stdout);
-													                count += len;
-															            f++;
-																            }
-								    }
-
-			        fclose(r);
-				    return count;
+	if (fd == -1)
+		return-1;
+	buf = malloc(letters);
+	bytes_read = read(fd, buf, letters);
+	bytes_written = write(STDOUT_FILENO, buf, bytes_read);
+	
+	free(buf);
+	close(fd);
+	return (bytes_written);
 }
