@@ -13,9 +13,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t bytes_read, bytes_written;
 	int fd = open(filename, O_RDONLY);
 
-	if (fd == -1)
+	if (!fd || filename == NULL)
 	{
-		return (-1);
+		return (0);
 	}
 	buf = malloc(letters);
 	bytes_read = read(fd, buf, letters);
