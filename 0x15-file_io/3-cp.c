@@ -9,15 +9,14 @@
 
 int main(int ac, char **av)
 {
-	int k, g = 1024, j;
-	FILE *r;
+	int k, g = 1024, j, r;
 	char arr[1024];
 
 	if (ac != 3)
 	{ dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97); }
-	r = fopen(av[1], "r");
-	if (r == NULL || av[1] == NULL)
+	r = open(av[1], O_RDONLY);
+	if (r == -1 || av[1] == NULL)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98); }
@@ -28,7 +27,7 @@ int main(int ac, char **av)
 		exit(99); }
 	while (g == 1024)
 	{
-		g = fread(arr, sizeof(char), 1024, r);
+		g = read(r, arr, 1024);
 		if (g == -1)
 		{
 			dprintf(2, "Error: Can't read from file %s\n", av[1]);
@@ -38,9 +37,9 @@ int main(int ac, char **av)
 		{
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99); }
-		fclose(r);
-		if (fclose(r) == -1)
-		{ dprintf(2, "Error: Can't close fd r");
+		close(r);
+		if (close(r) == -1)
+		{ dprintf(2, "Error: Can't close fd %d\n", r);
 			exit(100); }
 		close(k);
 		if (close(k) == -1)
