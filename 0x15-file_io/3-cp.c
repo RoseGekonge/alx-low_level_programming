@@ -9,7 +9,8 @@
 
 int main(int ac, char **av)
 {
-	int k, g = 1024, j, r;
+	int k, r;
+	ssize_t g = 1024, j;
 	char arr[1024];
 
 	if (ac != 3)
