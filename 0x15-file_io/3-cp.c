@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-	int k, g, j;
+	int k, g = 1024, j;
 	FILE *r;
 	char arr[1024];
 
@@ -27,25 +27,28 @@ int main(int ac, char **av)
 	{
 		dprintf(2, "Error: Can't write to NAME_OF_THE_FILE\n");
 		exit(99); }
-	g = fread(arr, sizeof(char), 1024, r);
-	if (g == -1)
+	while (g == 1024)
 	{
-		dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE\n");
-		exit(98); }
-	j = write(k, arr, g);
-	if (j == -1)
-	{
-		dprintf(2, "Error: Can't write to NAME_OF_THE_FILE\n");
-		exit(99); }
-	fclose(r);
-	if (fclose(r) == -1)
-	{
-		dprintf(2, "Error: Can't close fd FD_VALUE\n");
-		exit(100); }
-	close(k);
-	if (close(k) == -1)
-	{
-		dprintf(2, "Error: Can't close fd FD_VALUE\n");
-		exit(100); }
+		g = fread(arr, sizeof(char), 1024, r);
+		if (g == -1)
+		{
+			dprintf(2, "Error: Can't read from file NAME_OF_THE_FILE\n");
+			exit(98); }
+		j = write(k, arr, g);
+		if (j == -1)
+		{
+			dprintf(2, "Error: Can't write to NAME_OF_THE_FILE\n");
+			exit(99); }
+		fclose(r);
+		if (fclose(r) == -1)
+		{
+			dprintf(2, "Error: Can't close fd FD_VALUE\n");
+			exit(100); }
+		close(k);
+		if (close(k) == -1)
+		{
+			dprintf(2, "Error: Can't close fd FD_VALUE\n");
+			exit(100); }
+	}
 	return (0);
 }
