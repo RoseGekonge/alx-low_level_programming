@@ -8,11 +8,11 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t g = 0;
-	while (node)
+	while (h)
 	{
 		g++;
 		printf("%d\n", h->n);
-		node = node->next;
+		h = h->next;
 	}
 	return (g);
 }
